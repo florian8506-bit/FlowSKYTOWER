@@ -1,9 +1,8 @@
 ; Engine configuration file.
-; It's best edited using the editor UI and not directly.
 config_version=5
 
 [application]
-config/name="FlowSKYTOWER"
+config/name="Flow Sky Tower"
 run/main_scene="res://scenes/main.tscn"
 
 [display]
@@ -12,8 +11,12 @@ window/size/viewport_height=960
 window/size/window_width_override=540
 window/size/window_height_override=960
 window/stretch/mode="canvas_items"
+window/handheld/orientation=1
 
 [rendering]
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.03, 0.05, 0.12, 1)
+textures/default_filters/use_nearest_mipmap_filter=false
+
+[physics]
+common/physics_ticks_per_second=60
