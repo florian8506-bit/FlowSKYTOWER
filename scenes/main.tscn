@@ -1,45 +1,46 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene format=3 uid="uid://c1j140jyweukv"]
 
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_player"]
-[ext_resource type="Script" path="res://scripts/effects.gd" id="3_fx"]
-[ext_resource type="AudioStream" path="res://audio/positive.wav" id="4_pos"]
-[ext_resource type="AudioStream" path="res://audio/attack.wav" id="5_attack"]
+[ext_resource type="Script" uid="uid://plci5mcmpl7v" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://cgw3i3xvpb5nl" path="res://scripts/player.gd" id="2_player"]
+[ext_resource type="Script" uid="uid://cn3djvx4363uv" path="res://scripts/effects.gd" id="3_fx"]
+[ext_resource type="AudioStream" uid="uid://bkkvbsjmwfbyu" path="res://audio/positive.wav" id="4_pos"]
+[ext_resource type="AudioStream" uid="uid://bi88wubk1qwal" path="res://audio/attack.wav" id="5_attack"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1825015490]
 script = ExtResource("1_main")
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="." unique_id=346565103]
 
-[node name="World" type="Node2D" parent="."]
+[node name="World" type="Node2D" parent="." unique_id=1403264128]
 
-[node name="Platforms" type="Node2D" parent="World"]
+[node name="Platforms" type="Node2D" parent="World" unique_id=1074196507]
 
-[node name="Player" type="Node2D" parent="World"]
+[node name="Player" type="Node2D" parent="World" unique_id=498743202]
 position = Vector2(270, 820)
 script = ExtResource("2_player")
 
-[node name="Effects" type="Node2D" parent="."]
+[node name="Effects" type="Node2D" parent="." unique_id=657934819]
 script = ExtResource("3_fx")
 
-[node name="AudioPositive" type="AudioStreamPlayer" parent="."]
+[node name="AudioPositive" type="AudioStreamPlayer" parent="." unique_id=528076624]
 stream = ExtResource("4_pos")
 volume_db = -7.0
 
-[node name="AudioAttack" type="AudioStreamPlayer" parent="."]
+[node name="AudioAttack" type="AudioStreamPlayer" parent="." unique_id=335690343]
 stream = ExtResource("5_attack")
 volume_db = -8.0
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1409203742]
 
-[node name="TopPanel" type="ColorRect" parent="UI"]
+[node name="TopPanel" type="ColorRect" parent="UI" unique_id=247627455]
 offset_left = 18.0
 offset_top = 18.0
 offset_right = 522.0
 offset_bottom = 132.0
 color = Color(0.025, 0.055, 0.12, 0.94)
 
-[node name="Title" type="Label" parent="UI/TopPanel"]
+[node name="Title" type="Label" parent="UI/TopPanel" unique_id=939047148]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 12.0
 offset_right = 300.0
@@ -48,7 +49,8 @@ theme_override_colors/font_color = Color(0.9, 0.97, 1, 1)
 theme_override_font_sizes/font_size = 23
 text = "FLOW SKY TOWER"
 
-[node name="Progress" type="Label" parent="UI/TopPanel"]
+[node name="Progress" type="Label" parent="UI/TopPanel" unique_id=1286327296]
+layout_mode = 0
 offset_left = 20.0
 offset_top = 50.0
 offset_right = 230.0
@@ -57,7 +59,8 @@ theme_override_colors/font_color = Color(0.55, 1, 0.4, 1)
 theme_override_font_sizes/font_size = 34
 text = "0 / 70"
 
-[node name="Combo" type="Label" parent="UI/TopPanel"]
+[node name="Combo" type="Label" parent="UI/TopPanel" unique_id=1503966537]
+layout_mode = 0
 offset_left = 330.0
 offset_top = 56.0
 offset_right = 480.0
@@ -67,7 +70,7 @@ theme_override_font_sizes/font_size = 21
 text = "COMBO x0"
 horizontal_alignment = 2
 
-[node name="Status" type="Label" parent="UI"]
+[node name="Status" type="Label" parent="UI" unique_id=2079323509]
 offset_left = 40.0
 offset_top = 145.0
 offset_right = 500.0
@@ -77,24 +80,27 @@ theme_override_font_sizes/font_size = 18
 text = "MODE TEST - cadeaux simules"
 horizontal_alignment = 1
 
-[node name="ControlsPanel" type="ColorRect" parent="UI"]
+[node name="ControlsPanel" type="ColorRect" parent="UI" unique_id=1741293692]
 offset_left = 18.0
 offset_top = 812.0
 offset_right = 522.0
 offset_bottom = 944.0
 color = Color(0.02, 0.04, 0.09, 0.9)
 
-[node name="Controls" type="Label" parent="UI/ControlsPanel"]
+[node name="Controls" type="Label" parent="UI/ControlsPanel" unique_id=1099968030]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 12.0
 offset_right = 486.0
 offset_bottom = 118.0
 theme_override_colors/font_color = Color(0.92, 0.96, 1, 1)
 theme_override_font_sizes/font_size = 18
-text = "1  ROSE +1         2  BOOST +5\n3  ATTAQUE -3      4  SUPER +12\nR  RECOMMENCER"
+text = "1  ROSE +1         2  BOOST +5
+3  ATTAQUE -3      4  SUPER +12
+R  RECOMMENCER"
 horizontal_alignment = 1
 
-[node name="EventCard" type="ColorRect" parent="UI"]
+[node name="EventCard" type="ColorRect" parent="UI" unique_id=628487563]
 visible = false
 offset_left = 75.0
 offset_top = 660.0
@@ -102,7 +108,7 @@ offset_right = 465.0
 offset_bottom = 744.0
 color = Color(0.06, 0.12, 0.24, 0.96)
 
-[node name="EventText" type="Label" parent="UI/EventCard"]
+[node name="EventText" type="Label" parent="UI/EventCard" unique_id=1815811891]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 18.0
